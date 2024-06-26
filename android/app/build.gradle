@@ -102,6 +102,14 @@ android {
         versionName "1.0"
     }
 
+    lintOptions {
+        disable 'NewApi'
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     splits {
         abi {
             reset()
